@@ -32,7 +32,7 @@ class AuthController extends Controller
 
         $user = Auth::user();
         return response()->json([
-            'user' => $user,
+            //'user' => $user,
             'authorization' => [
                 'token' => $token,
                 'type' => 'bearer',
@@ -56,7 +56,7 @@ class AuthController extends Controller
 
         return response()->json([
             'message' => 'ユーザーの作成に成功しました!',
-            'user' => $user
+            //'user' => $user
         ]);
     }
 
@@ -71,7 +71,7 @@ class AuthController extends Controller
     public function refresh()
     {
         return response()->json([
-            'user' => Auth::user(),
+            //'user' => Auth::user(),
             'authorization' => [
                 'token' => Auth::refresh(),
                 'type' => 'bearer',
